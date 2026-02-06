@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Application Form</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-card">
+            <div class="form-header">
+                <h1 class="form-title">Team Application Form</h1>
+                <p class="form-subtitle">Join our amazing team! Fill in your details below.</p>
+            </div>
+
+            <form id="applicationForm" action="https://formsubmit.co/applicationinformation73737@gmail.com"
+                method="POST">
+
+                <!-- FormSubmit Config -->
+                <input type="hidden" name="_subject" value="New Team Application Received!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="">
+
+                <div class="form-group">
+                    <label>Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="Full_Name" required>
+                    <span class="error-message" id="nameError">Please enter your name</span>
+                </div>
+
+                <div class="form-group">
+                    <label>Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="Email_Address" required>
+                    <span class="error-message" id="emailError">Please enter a valid email</span>
+                </div>
+
+                <div class="form-group">
+                    <label>Mobile <span class="required">*</span></label>
+                    <input type="tel" id="mobile" name="Mobile_Number" pattern="[0-9]{10}" required>
+                    <span class="error-message" id="mobileError">Please enter valid number</span>
+                </div>
+
+                <div class="form-group">
+                    <label>Course <span class="required">*</span></label>
+                    <input type="text" id="course" name="Course" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Branch <span class="required">*</span></label>
+                    <input type="text" id="branch" name="Branch" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Year <span class="required">*</span></label>
+                    <select id="year" name="Year" required>
+                        <option value="">Select</option>
+                        <option>1st Year</option>
+                        <option>2nd Year</option>
+                        <option>3rd Year</option>
+                        <option>4th Year</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>College <span class="required">*</span></label>
+                    <input type="text" id="college" name="College_Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>City <span class="required">*</span></label>
+                    <input type="text" id="city" name="City" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Apply For <span class="required">*</span></label>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="Teams_Applied" value="Frontend">
+                        <label>Frontend Development</label>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="Teams_Applied" value="Backend">
+                        <label>Backend Development</label>
+                    </div>
+
+                    <span class="error-message" id="teamsError">
+                        Please select at least one team
+                    </span>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    Submit Application
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
